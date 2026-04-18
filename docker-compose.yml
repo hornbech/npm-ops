@@ -12,3 +12,4 @@ services:
       - TZ=Europe/Copenhagen
       - HTML_REFRESH=10
       - KEEP_LAST=30
+      - PROCESSING_DATES=true
