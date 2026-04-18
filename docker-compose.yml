@@ -1,0 +1,14 @@
+services:
+  goaccess:
+    image: xavierh/goaccess-for-nginxproxymanager:latest
+    container_name: goaccess
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:7880:7880'
+    volumes:
+      - /home/jhh/npm/data/logs:/opt/log:ro
+    environment:
+      - LOG_TYPE=NPM
+      - TZ=Europe/Copenhagen
+      - HTML_REFRESH=10
+      - KEEP_LAST=30
